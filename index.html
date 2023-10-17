@@ -4,29 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Burger Restaurant</title>
+    <title>Backyard Burger</title>
     <style>
-        /* Your CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <!-- Header content (restaurant name, menu links, etc.) -->
-        <h1>Your Burger Restaurant</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </nav>
+        <h1>Backyard Burger</h1>
+        <p>Delicious Charcoal Grilled Burgers Just for You!</p>
     </header>
 
     <div class="container">
-        <!-- Other content of your website can go here -->
-        <h2>Welcome to Your Burger Restaurant!</h2>
-        <p>Discover our delicious burger menu...</p>
+        <div class="menu-item">
+            <h2>Burger Name 1</h2>
+            <p>Description of the burger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $10.99</p>
+        </div>
 
+        <div class="menu-item">
+            <h2>Burger Name 2</h2>
+            <p>Description of the burger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $12.99</p>
+        </div>
+
+        <!-- Add more menu items as needed -->
         <!-- Payment Instructions Section -->
         <div class="payment-instructions">
             <h2>Payment Options</h2>
@@ -40,10 +69,6 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        <!-- Footer content (contact information, social media links, etc.) -->
-    </footer>
 </body>
 
 </html>
