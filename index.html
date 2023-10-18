@@ -40,6 +40,7 @@
     <header>
         <h1>Backyard Burger</h1>
         <p>Delicious Charcoal Grilled Burgers Just for You!</p>
+         <div id="cart-icon">🛒</div>
     </header>
 
     <div class="container">
@@ -47,15 +48,37 @@
             <h2>Burger Name 1</h2>
             <p>Description of the burger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $10.99</p>
+            <button data-index="0">Add to Cart</button>
         </div>
 
         <div class="menu-item">
             <h2>Burger Name 2</h2>
             <p>Description of the burger. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $12.99</p>
+            <button data-index="1">Add to Cart</button>
         </div>
 
         <!-- Add more menu items as needed -->
+
+        <!-- Cart display area -->
+        <div id="cart" class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer content (contact information, social media links, etc.) -->
+    </footer>
+
+    <script>
+        // JavaScript code for cart functionality
+        // ...
+    </script>
+</body>
+
+</html>
         <!-- Payment Instructions Section -->
         <div class="payment-instructions">
             <h2>Payment Options</h2>
