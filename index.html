@@ -73,8 +73,50 @@
     </footer>
 
     <script>
-        // JavaScript code for cart functionality
-        // ...
+    const cartIcon = document.getElementById('cart-icon');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    const menuItems = [
+        { name: 'Burger Name 1', price: 10.99 },
+        { name: 'Burger Name 2', price: 12.99 },
+        // Add more menu items as needed
+    ];
+
+    let cart = [];
+
+    // Function to render cart items
+    function renderCart() {
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItems.appendChild(li);
+            total += item.price;
+        });
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    // Event listener for adding items to the cart
+    function addToCart(itemIndex) {
+        const selectedItem = menuItems[itemIndex];
+        cart.push(selectedItem);
+        renderCart();
+    }
+
+    // Event delegation for menu item clicks
+    document.querySelector('.container').addEventListener('click', event => {
+        if (event.target.tagName === 'BUTTON') {
+            const itemIndex = event.target.dataset.index;
+            addToCart(itemIndex);
+        }
+    });
+
+    // Event listener for displaying/hiding the cart
+    cartIcon.addEventListener('click', () => {
+        cartItems.classList.toggle('cart-show');
+    });
     </script>
 </body>
 
